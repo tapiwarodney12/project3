@@ -1,0 +1,268 @@
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  width: 100%;
+  padding: 30px 40px;
+  border-bottom: 1.5px solid white;
+}
+
+.header .links {
+  display: none;
+  margin-left: 150px;
+}
+
+.header .logo {
+  text-decoration: none;
+}
+
+.header .logo h3 {
+  color: red;
+  font-size: 30px;
+  font-family: "gotham italic";
+}
+
+.header .ham {
+  position: relative;
+  z-index: 998;
+}
+
+.header .ham .slide {
+  position: absolute;
+  right: 0;
+  font-size: 30px;
+  font-family: "gotham regular";
+  opacity: 0;
+}
+
+.header .ham:hover .slide {
+  right: 50px;
+  opacity: 1;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.header .stayopen .slide {
+  right: 50px;
+  opacity: 1;
+  -webkit-transition: 1s;
+  transition: 1s;
+  color: white;
+}
+
+.header .menu {
+  background-color: #1D809F;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  left: -100vw;
+  opacity: 0;
+  -webkit-transition: .4s ease;
+  transition: .4s ease;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  z-index: 997;
+  height: 100vh;
+}
+
+.header .menu .menu-item {
+  padding: 15px 20px;
+  list-style: none;
+}
+
+.header .menu .menu-item a {
+  color: white;
+  font-family: "gotham regular";
+}
+
+.header .hamburger {
+  height: 30px;
+  width: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.header .hamburger .bar {
+  height: 4px;
+  width: 100%;
+  background-color: white;
+  border-radius: 20px;
+  z-index: 998;
+}
+
+.header .hamburger #top {
+  -webkit-transform: translateY(-6px);
+          transform: translateY(-6px);
+  -webkit-transition: all .6s ease;
+  transition: all .6s ease;
+  width: 100%;
+}
+
+.header .hamburger #middle {
+  -webkit-transition: all .6s ease;
+  transition: all .6s ease;
+  color: white;
+  width: 75%;
+}
+
+.header .hamburger #bottom {
+  -webkit-transform: translateY(6px);
+          transform: translateY(6px);
+  -webkit-transition: all .6s ease;
+  transition: all .6s ease;
+  width: 50%;
+}
+
+.header .open {
+  opacity: 1;
+  left: 0;
+}
+
+.header .open .slide {
+  right: 50px;
+  opacity: 1;
+  z-index: 999;
+  color: white;
+}
+
+.header .open #top {
+  -webkit-transform: translateY(6px) rotate(45deg);
+          transform: translateY(6px) rotate(45deg);
+  background-color: white;
+  width: 100%;
+}
+
+.header .open #middle {
+  opacity: 0;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  background-color: white;
+  width: 100%;
+}
+
+.header .open #bottom {
+  -webkit-transform: translateY(-6px) rotate(135deg);
+          transform: translateY(-6px) rotate(135deg);
+  background-color: white;
+  width: 100%;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 568px) {
+  .header .menu {
+    top: 0;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {
+  .header .menu {
+    top: 0;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .hamburger:hover {
+    height: 30px;
+    width: 40px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    cursor: pointer;
+  }
+  .hamburger:hover #top {
+    -webkit-transform: translateY(6px) rotate(45deg);
+            transform: translateY(6px) rotate(45deg);
+  }
+  .hamburger:hover #middle {
+    opacity: 0;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  .hamburger:hover #bottom {
+    -webkit-transform: translateY(-6px) rotate(-45deg);
+            transform: translateY(-6px) rotate(-45deg);
+    width: 100%;
+  }
+  .header .links {
+    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .header .links .links-item {
+    margin-right: 40px;
+    font-family: "gotham regular";
+    font-size: 18px;
+  }
+  .header .links .links-item a {
+    color: white;
+  }
+  .menu .menu-item a {
+    font-size: 20px;
+  }
+  .open:hover {
+    opacity: 1;
+    left: 0;
+  }
+  .open:hover #top {
+    -webkit-transform: translateY(-6px);
+            transform: translateY(-6px);
+    -webkit-transition: all .6s ease;
+    transition: all .6s ease;
+  }
+  .open:hover #middle {
+    -webkit-transition: all .6s ease;
+    transition: all .6s ease;
+    opacity: 1;
+    color: white !important;
+    width: 75%;
+  }
+  .open:hover #bottom {
+    -webkit-transform: translateY(6px);
+            transform: translateY(6px);
+    -webkit-transition: all .6s ease;
+    transition: all .6s ease;
+    width: 50%;
+  }
+}
+/*# sourceMappingURL=navigation.css.map */
